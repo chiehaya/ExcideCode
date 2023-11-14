@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.news {
+    background-color: #F8F8F8;
+}
+
+.news__nav {
+    margin-top: rem(40);
+    border-bottom: 1px solid #E2E2E2;
+    padding-bottom: rem(40);
+    @include mq(md){
+        border-bottom: none;
+    }
+}
+
+.news__container {
+    margin-top: rem(40);
+    padding: 0 rem(20);
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.news__head {
+    @include mq(md){
+        border-right: 1px solid #E2E2E2;
+        padding-top: rem(10);
+        padding-right: rem(96);
+    }
+}
+
+.news__items {
+    @include mq(md){
+        padding-left: rem(60);
+    }
+}

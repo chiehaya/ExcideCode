@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.news-nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: rem(15);
+    column-gap: rem(40);
+    padding: 0 rem(15);
+    @include mq(md){
+        flex-direction: column;
+        row-gap: rem(25);
+    }
+}
+
+.news-nav__item {
+    position: relative;
+}
+
+.news-nav__item.is-active::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $navy;
+    width: rem(8);
+    height: rem(8);
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(-12);
+}
+
+.news-nav__item a {
+    display: block;
+    color: #A9A9A9;
+    font-size: rem(12);
+    font-weight: $medium;
+    line-height: 1;
+    transition: .3s;
+}
+
+.news-nav__item.is-active a {
+    color: $black;
+}
+
+.news-nav__item a:hover {
+    color: $black;
+}
+

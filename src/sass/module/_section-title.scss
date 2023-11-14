@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.section-title {
+    font-family: $Oswald-font-family;
+    font-size: rem(38);
+    font-weight: $bold;
+    text-transform: capitalize;
+    // letter-spacing: em;
+    line-height: 1;
+    @include mq(md){
+        font-size: rem(70);
+    }
+}

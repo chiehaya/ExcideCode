@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.site-message__container {
+    display: flex;
+    overflow: hidden;
+}
+
+.site-message__sub-title {
+    color: $navy;
+    font-size: rem(84);
+    font-weight: $bold;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.site-message__sub-title:nth-child(odd) {
+    animation: loop 25s -12.5s linear infinite;
+    padding-right: 20px;
+}
+
+.site-message__sub-title:nth-child(even) {
+    animation: loop2 25s linear infinite;
+    padding-right: 10px;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes loop2 {
+    0% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}

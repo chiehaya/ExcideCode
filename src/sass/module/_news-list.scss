@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.news-list {
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.news-list__meta {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+}
+
+.news-list__title {
+    margin-top: rem(20);
+}
+

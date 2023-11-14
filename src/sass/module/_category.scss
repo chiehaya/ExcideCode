@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.category {
+    padding: rem(5);
+    min-width: rem(80);
+    width: fit-content;
+    font-size: rem(10);
+    line-height: 1;
+    color: #626262;
+    text-align: center;
+    @include mq(md){
+        font-size: rem(11);
+    }
+}
+
+.category--gray {
+    background-color: #F8F8F8;
+}
+
+.category--white {
+    background-color: $white;
+}

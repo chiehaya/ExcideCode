@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.btn {
+    padding: 0 rem(24);
+    position: relative;
+    display: inline-block;
+    font-size: rem(14);
+    line-height: 1;
+    // letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $navy;
+    font-family: $Roboto-font-family;
+    font-weight: $medium;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(12);
+    width: rem(8);
+    height: rem(8);
+    border-top: rem(1) solid $navy;
+    border-right: rem(1) solid $navy;
+    transform: translateY(-50%) rotate(45deg);
+    transition: .3s;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:hover::before {
+    right: rem(7);
+}
+
+// Modifier
+.btn.btn--square {
+    padding: rem(14) rem(39) rem(14) rem(24);
+    border: 1px solid $navy;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn.btn--square::before {
+    right: rem(25);
+}
+
+.btn.btn--square:hover::before {
+    right: rem(20);
+}

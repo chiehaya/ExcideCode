@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.service__inner {
+    max-width: rem(1110);
+    margin: auto;
+}
+
+.service__title {
+    text-align-last: left;
+}
+
+.service__items {
+    margin-top: rem(40);
+}
+

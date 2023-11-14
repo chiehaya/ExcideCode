@@ -1,0 +1,256 @@
+@use "global" as *;
+
+.header {
+    height: rem(80);
+    @include mq(md){
+        background-color: $white;
+    }
+}
+
+.header__inner {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: rem(114);
+    width: 100%;
+    height: inherit;
+    z-index: 9999;
+    @include mq(md) {
+        max-width: rem(258);
+        height: rem(180);
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+.header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .9s;
+}
+
+.header__logo.is-open img:first-of-type {
+    opacity: 1;
+}
+
+.header__logo.is-open img:first-of-type {
+    opacity: 0;
+}
+
+.header__logo img:last-of-type {
+    opacity: 0;
+}
+
+.header__logo.is-open img:last-of-type {
+    opacity: 1;
+}
+
+.header__nav {
+    display: none;
+    height: rem(80);
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.header__nav-items {
+    display: flex;
+    height: inherit;
+}
+
+.header__nav-item {
+    height: inherit;
+}
+
+.header__nav-item.header__nav-item--contact {
+    margin-left: rem(15);
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-item a {
+    padding: 0 rem(25);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1;
+    color: $black;
+    text-transform: uppercase;
+    font-family: $Roboto-font-family;
+    font-weight: $medium;
+    position: relative;
+    transition: .3s;
+}
+
+.header__nav-item a:hover {
+    opacity: 0.7;
+}
+
+.header__nav-item.header__nav-item--contact a {
+    padding-left: rem(41);
+    padding-right: rem(41);
+    position: relative;
+    height: inherit;
+    color: $white;
+    background-color: $navy;
+}
+
+.header__nav-item.header__nav-item--contact i {
+    padding-right: rem(10);
+}
+
+.header__hamburger {
+    margin: 0;
+    padding-right: rem(50);
+    outline: none;
+    border: none;
+    position: relative;
+    z-index: 999;
+    width: rem(40);
+    height: inherit;
+    cursor: pointer;
+    transition: .3s;
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.header__hamburger.is-open {
+    background-color: transparent;
+}
+
+.header__hamburger span {
+    position: relative;
+    display: block;
+    width: rem(25);
+    height: 1px;
+    background-color: #242424;
+    transition: .5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+    top: rem(-7);
+}
+
+.header__hamburger span:nth-of-type(2) {
+    top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+    top: rem(7);
+    width: rem(17);
+    text-align: left;
+}
+
+.header__hamburger.is-open span {
+    background-color: $white;
+}
+
+
+.header__hamburger.is-open span:nth-of-type(1) {
+    top: 0;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+    top: rem(-2);
+    width: rem(25);
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.header__drawer {
+    padding: rem(172) 0;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh;
+    background-color: $navy;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    transition: .6s;
+}
+
+.header__drawer.is-open {
+    right: 0;
+}
+
+.header__drawer::-webkit-scrollbar {
+    display:none;
+}
+
+
+.header__drawer-item a {
+    padding: rem(12) 0 rem(12) rem(50);
+    display: block;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: $white;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: $Roboto-font-family;
+}
+
+.header__drawer-item a span {
+    position: relative;
+}
+
+.header__drawer-item a span::before{
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: rem(-3);
+    transition: transform 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    background-color: $white;
+}
+
+.header__drawer-item a span:hover::before {
+    transform: scale(1, 1);
+}
+
+.header__drawer-item.header__drawer-item--privacy {
+    font-family: $base-font-family;
+}
+
+.header__drawer-item.header__drawer-item--share {
+    padding-left: rem(50);
+    margin-top:rem(50);
+    display: flex;
+    gap: rem(10);
+    color: $white;
+}
+
+.header__drawer-item.header__drawer-item--share a {
+    padding: 0;
+    transition: .3s;
+}
+
+.header__drawer-item.header__drawer-item--share a:hover {
+    opacity: 0.8;
+}

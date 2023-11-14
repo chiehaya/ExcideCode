@@ -16,22 +16,399 @@
   <meta property="og:image" content="" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
+  <!-- google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/9bf8d07919.js" crossorigin="anonymous"></script>
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
+  <header class="header layout-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#">
+          <img src="./assets/images/common/logo 1.png" alt="LOGO">
+          <img src="./assets/images/common/logo 2.png" alt="LOGO">
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a href="#">top</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">about</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">service</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">works</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">news</a>
+          </li>
+          <li class="header__nav-item header__nav-item--contact">
+            <a href="#">
+              <i class="fa-regular fa-envelope"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header__drawer js-drawer">
+        <nav class="header__drawer-nav">
+          <ul class="header__drawer-items">
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>top</span>
+              </a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>about</span>
+              </a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>service</span>
+              </a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>works</span>
+              </a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>news</span>
+              </a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">
+                <span>contact</span>
+              </a>
+            </li>
+            <li class="header__drawer-item header__drawer-item--privacy">
+              <a href="#">
+                <span>プライバシーポリシー</span>
+              </a>
+            </li>
+            <li class="header__drawer-item header__drawer-item--share">
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+    <div class="mv">
+      <div class="mv__inner">
+        <div class="mv__container">
+          <div class="mv__swiper swiper js-mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="./assets/images/common/mv-sp01.jpg" alt="省略">
+                  <img src="./assets/images/common/mv-pc01.jpg" alt="省略">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="./assets/images/common/mv-sp02.jpg" alt="省略">
+                  <img src="./assets/images/common/mv-pc02.jpg" alt="省略">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="./assets/images/common/mv-sp03.jpg" alt="省略">
+                  <img src="./assets/images/common/mv-pc03.jpg" alt="省略">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="./assets/images/common/mv-sp04.jpg" alt="省略">
+                  <img src="./assets/images/common/mv-pc04.jpg" alt="省略">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mv__contents">
+            <p class="mv__title">
+              あなたの<br>日常が目覚める
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="site-message layout-site-message">
+      <div class="site-message__inner">
+        <div class="site-message__container">
+          <p class="site-message__sub-title">Good life for Good Car</p>
+          <p class="site-message__sub-title">Good life for Good Car</p>
+          <p class="site-message__sub-title">Good life for Good Car</p>
+          <p class="site-message__sub-title">Good life for Good Car</p>
+        </div>
+      </div>
+    </div>
+    <div class="about layout-about">
+      <div class="about__inner inner">
+        <div class="about__img">
+          <img src="./assets/images/common/about-img.jpg" alt="about us">
+        </div>
+        <div class="about__wrapper">
+          <p class="about__title">about us</p>
+          <p class="about__message">
+            弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。
+          </p>
+          <div class="about__btn">
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="service layout-service">
+      <div class="service__inner inner">
+        <h3 class="service__title section-title">service</h3>
+        <ul class="service__items service-list">
+          <li class="service-list__item service-card">
+            <a href="#">
+              <div class="service-card__img">
+                <img src="./assets/images/common/service01.jpg" alt="service01">
+                <div class="service-card__header">
+                  <p class="service-card__number">service01</p>
+                  <p class="service-card__title">購入サポート</p>
+                </div>
+              </div>
+              <div class="service-card__content">
+                <p class="service-card__text">国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。</p>
+                <div class="service-card__btn">
+                  <a href="" class="btn btn--square">read more</a>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="service-list__item service-card">
+            <a href="#">
+              <div class="service-card__img">
+                <img src="./assets/images/common/service02.jpg" alt="service02">
+                <div class="service-card__header">
+                  <p class="service-card__number">service02</p>
+                  <p class="service-card__title">修理・整備</p>
+                </div>
+              </div>
+              <div class="service-card__content">
+                <p class="service-card__text">高度な輸入車修理技術と数多くの修理実績、熟練の技術・設備であなたの愛車を完全に直します。</p>
+                <div class="service-card__btn">
+                  <a href="" class="btn btn--square">read more</a>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="service-list__item service-card">
+            <a href="#">
+              <div class="service-card__img">
+                <img src="./assets/images/common/service03.jpg" alt="service03">
+                <div class="service-card__header">
+                  <p class="service-card__number">service03</p>
+                  <p class="service-card__title">車検・点検</p>
+                </div>
+              </div>
+              <div class="service-card__content">
+                <p class="service-card__text">輸入車の取り扱いが県内トップクラス。専門の整備工場へ任せたいなら弊社へご相談ください。</p>
+                <div class="service-card__btn">
+                  <a href="" class="btn btn--square">read more</a>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="works layout-works">
+      <div class="works__inner">
+        <h3 class="works__title section-title">works</h3>
+        <div class="works__contents">
+          <ul class="works__items works-lists">
+            <li class="works-lists__item works-list">
+              <a href="#">
+                <div class="works-list__img">
+                  <img src="./assets/images/common/works01.jpg" alt="省略">
+                </div>
+                <div class="works-list__content">
+                    <p class="works-list__category">修理・整備</p>
+                    <p class="works-list__head">
+                      <span class="works-list__title">車のドアが開けられなくなった</span>
+                      <span class="works-list__sub-title">
+                        ドアロックの交換とドアロックの交換とドアロックの交換とドアロックの交換と
+                      </span>
+                    </p>
+                    <p class="works-list__text">
+                      弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                    </p>
+                    <time class="works-list__date" datetime="2022-09-20">2022.09.20</time>
+                </div>
+              </a>
+            </li>
+            <li class="works-lists__item works-list">
+              <a href="#">
+                <div class="works-list__img">
+                  <img src="./assets/images/common/works01.jpg" alt="省略">
+                </div>
+                <div class="works-list__content">
+                    <p class="works-list__category">修理・整備</p>
+                    <p class="works-list__head">
+                      <span class="works-list__title">車のドアが開けられなくなった</span>
+                      <span class="works-list__sub-title">
+                        ドアロックの交換とドアロックの交換とドアロックの交換とドアロックの交換と
+                      </span>
+                    </p>
+                    <p class="works-list__text">
+                      弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                    </p>
+                    <time class="works-list__date" datetime="2022-09-20">2022.09.20</time>
+                </div>
+              </a>
+            </li>
+            <li class="works-lists__item works-list">
+              <a href="#">
+                <div class="works-list__img">
+                  <img src="./assets/images/common/works01.jpg" alt="省略">
+                </div>
+                <div class="works-list__content">
+                    <p class="works-list__category category category--gray">修理・整備</p>
+                    <p class="works-list__head">
+                      <span class="works-list__title">車のドアが開けられなくなった</span>
+                      <span class="works-list__sub-title">
+                        ドアロックの交換とドアロックの交換とドアロックの交換とドアロックの交換と
+                      </span>
+                    </p>
+                    <p class="works-list__text">
+                      弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                    </p>
+                    <time class="works-list__date date" datetime="2022-09-20">2022.09.20</time>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="works__btn">
+            <a href="#" class="btn">read more</a>
+          </div>
+      </div>
+      </div>  
+    </section>
+
+    <section class="news layout-news">
+      <div class="news__inner inner">
+        <div class="news__container">
+          <div class="news__head">
+            <h3 class="news__title section-title">news</h3>
+            <ul class="news__nav news-nav">
+              <li class="news-nav__item is-active">
+                <a href="" class="">すべてのお知らせ</a>
+              </li>
+              <li class="news-nav__item">
+                <a href="" class="">トピックス</a>  
+              </li>
+              <li class="news-nav__item">
+                <a href="" class="">イベント・キャンペーン</a>
+              </li>
+              <li class="news-nav__item">
+                <a href="" class="">入庫車情報</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="news__items news-lists">
+            <li class="news-lists__item news-list">
+              <a href="#">
+                <div class="news-list__meta">
+                  <time class="news-list__date date" datetime="2023-05-10">2023.05.10</time>
+                  <p class="news-list__category category category--white">トピックス</p>
+                  <p class="news-list__category category category--white">イベント・キャンペーン</p>
+                </div>
+                <p class="news-list__title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</p>
+              </a>
+            </li>
+            <li class="news-lists__item news-list">
+              <a href="#">
+                <div class="news-list__meta">
+                  <time class="news-list__date date" datetime="2023-08-23">2022.08.23</time>
+                  <p class="news-list__category category category--white">トピックス</p>
+                  <p class="news-list__category category category--white">入庫者情報</p>
+                </div>
+                <p class="news-list__title">【入庫車のご案内】メルセデスベンツG 350が入庫しました</p>
+              </a>
+            </li>
+            <li class="news-lists__item news-list">
+              <a href="#">
+                <div class="news-list__meta">
+                  <time class="news-list__date date" datetime="2023-08-07">2022.08.07</time>
+                  <p class="news-list__category category category--white">トピックス</p>
+                </div>
+                <p class="news-list__title">お盆休みのご案内</p>
+              </a>
+            </li>
+            <li class="news-lists__item news-list">
+              <a href="#">
+                <div class="news-list__meta">
+                  <time class="news-list__date date" datetime="2023-08-03">2022.08.03</time>
+                  <p class="news-list__category category category--white">トピックス</p>
+                  <p class="news-list__category category category--white">入庫者情報</p>
+                </div>
+                <p class="news-list__title">【入庫車のご案内】JEEPラングラー アンリミテッド サハラが入庫しました</p>
+              </a>
+            </li>
+            <li class="news-lists__item news-list">
+              <a href="#">
+                <div class="news-list__meta">
+                  <time class="news-list__date date" datetime="2023-07-26">2022.07.26</time>
+                  <p class="news-list__category category category--white">トピックス</p>
+                </div>
+                <p class="news-list__title">半導体不足は輸入車・輸入中古車にどう影響するか</p>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <a href="#" class="btn">read more</a> -->
+    <!-- Modifier -->
+    <!-- <a href="#" class="btn btn--square">read more</a> -->
+    <!-- <h3 class="section-title">
+      service
+    </h3> -->
   </main>
   <footer>
 
