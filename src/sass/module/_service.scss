@@ -6,10 +6,12 @@
 }
 
 .service__title {
-    text-align-last: left;
+    text-align: left;@include mq(md){
+        text-align: right;
+    }
 }
 
 .service__items {
-    margin-top: rem(40);
+    margin-top: rem(28);
 }
 

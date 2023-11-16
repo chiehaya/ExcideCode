@@ -1,6 +1,16 @@
 @use "global" as *;
 
 .news-lists__item {
-    padding-top: rem(20);
-    padding-bottom: rem(20);
+    padding-top: rem(19.5);
+    padding-bottom: rem(19.5);
+    @include mq(md){
+        padding-top: rem(29);
+        padding-bottom: rem(26);
+    }
+}
+
+.news-lists__item:first-child {
+    @include mq(md){
+        padding-top: 0;
+    }
 }

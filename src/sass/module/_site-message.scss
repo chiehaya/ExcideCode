@@ -10,8 +10,11 @@
     font-size: rem(84);
     font-weight: $bold;
     line-height: 1.5;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
     white-space: nowrap;
+    @include mq(md){
+        font-size: rem(150);
+    }
 }
 
 .site-message__sub-title:nth-child(odd) {

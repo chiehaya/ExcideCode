@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .category {
-    padding: rem(5);
+    padding: rem(7);
     min-width: rem(80);
     width: fit-content;
     font-size: rem(10);
@@ -10,6 +10,7 @@
     text-align: center;
     @include mq(md){
         font-size: rem(11);
+        padding: rem(6) rem(19);
     }
 }
 

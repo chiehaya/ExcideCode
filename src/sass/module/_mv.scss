@@ -15,7 +15,7 @@
     min-height: inherit;
     margin: auto;
     @include mq(md){
-        padding: 0 rem(80);
+        padding: 0 rem(68);
     } 
 }
 
@@ -24,13 +24,15 @@
     @include mq(md){
         display: flex;
         align-items: center;
-        gap: rem(80);
         width: 100%;
     }
 }
 
 .mv__swiper {
     width: 100%;
+    @include mq(md){
+        padding-left: rem(11);
+    }
 }
 
 .mv__swiper,
@@ -45,7 +47,7 @@
     width: 100%;
     aspect-ratio: 355 / 480;
     @include mq(md){
-        aspect-ratio: 1034 / 700;
+        aspect-ratio: 1034 / 780;
     }
 }
 
@@ -71,16 +73,23 @@
 .mv__contents {
     margin-top: rem(20);
     margin-left: rem(10);
+    @include mq(md){
+        margin-top: rem(63);
+        margin-left: rem(71);
+    }
 }
 
 .mv__title {
     font-size: rem(34);
     font-weight: $bold;
-    line-height: 1.5;
-    letter-spacing: 0.05em;@include mq(md){
+    line-height: 1.44;
+    letter-spacing: 0;
+    @include mq(md){
         font-size: rem(60);
         font-weight: $bold;
         writing-mode: vertical-rl;
+        letter-spacing: 0.06em;
+        margin-left: rem(13);
     }
 
 } 

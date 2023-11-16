@@ -1,7 +1,11 @@
 @use "global" as *;
 
 .layout-news {
-    padding-top: rem(82);
-    padding-bottom: rem(82);
+    padding-top: rem(49);
+    padding-bottom: rem(70);
+    @include mq(md){
+        padding-top: rem(120);
+        padding-bottom: rem(112);
+    }
 }
 

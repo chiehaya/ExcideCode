@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.footer-nav {
+
+}
+
+.footer-nav__item:not(:first-child){
+    margin-top: rem(26);
+    @include mq(md){
+        margin-top:rem(22.8) ;
+    }
+}
+
+.footer-nav__item a {
+    font-family: $Roboto-font-family;
+    font-size: rem(14);
+    text-transform: uppercase;
+    line-height: 1;
+    display: block;
+    @include mq(md){
+        font-size: rem(16);
+    }
+}
+.footer-nav__item-pryvacy a {
+    font-family: $base-font-family;
+}
+
+.footer-nav__item a span {
+    position: relative;
+}
+
+.footer-nav__item a span::before{
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: rem(-3);
+    transition: transform 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    background-color: $white;
+}
+
+.footer-nav__item a span:hover::before {
+    transform: scale(1, 1);
+}

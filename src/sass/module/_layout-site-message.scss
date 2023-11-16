@@ -1,5 +1,8 @@
 @use "global" as *;
 
 .layout-site-message {
-    margin-top: rem(20);
+    margin-top: rem(19);
+    @include mq(md){
+        margin-top: rem(56);
+    }
 }

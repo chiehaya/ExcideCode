@@ -55,11 +55,15 @@
     font-family: $Oswald-font-family;
     font-size: rem(16);
     font-weight: $bold;
+    line-height: 1;
+    text-transform: capitalize;
 }
 
 .service-card__title {
     font-size: rem(26);
     font-weight: $bold;
+    line-height: 1;
+    margin-top:rem(20) ;
 }
 
 .service-card-content {
@@ -69,30 +73,24 @@
     }
 }
 
-.service-card-title {
-    margin-top: rem(8);
-    font-size: rem(14);
-    font-weight: 700;
-    line-height: 1.5;
-    @include mq(md){
-        margin-top: rem(10);
-        font-size: rem(16);
-    }
-}
-
 .service-card__text {
     margin-top: rem(20);
     font-size: rem(14);
     line-height:2.28;
-    letter-spacing: 0.05em;
     font-weight: $regular;
     @include mq(md){
-        margin-top: rem(15);
-        font-size: rem(14);
+        margin-top: rem(21);
+        font-size: rem(16);
+        padding-right: rem(21);
+        line-height: 2.4;
     }
 }
 
 .service-card__btn {
     text-align: right;
     margin-top: rem(20);
+    @include mq(md){
+        margin-top: rem(18);
+        margin-right: rem(19);
+    }
 }
