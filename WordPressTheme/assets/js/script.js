@@ -51,4 +51,17 @@ jQuery(function ($) {
       disableOnInteraction: false
     }
   });
+
+  // フェードインアニメーション
+  var fadeIn = $('.service__title,.works__title,.news__title,.works__article,.news__nav,.news__contents');
+  $(window).scroll(function () {
+    $(fadeIn).each(function () {
+      var offset = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > offset - windowHeight + 150) {
+        $(this).addClass("is-scroll-in");
+      }
+    });
+  });
 });

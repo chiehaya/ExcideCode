@@ -3,6 +3,7 @@
 .works-list {
     padding-bottom: rem(28);
     border-bottom: 1px solid #E2E2E2;
+    display: flex;
     @include mq(md){
         padding-bottom: rem(48);
     }
@@ -15,9 +16,19 @@
     }
 }
 
-.works-list a {
+.works__article {
     display: flex;
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(0, -50px);
 }
+
+.works__article.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 
 .works-list__img {
     max-width: rem(120);
@@ -52,6 +63,11 @@
 .works-list__head {
     margin-top: rem(11.5);
     margin-bottom: rem(4);
+}
+
+.works-list__head a {
+    position: relative;
+    display: inline-block;
     font-size: rem(14);
     line-height: 2;
     overflow: hidden;
@@ -65,6 +81,23 @@
         margin-top: rem(23);
         max-width: rem(600);
     }
+}
+
+.works-list__head a span::before {
+    content: "";
+    width: calc(100% + rem(150)); /* 余白を追加 */
+    height: 1px;
+    position: absolute;
+    left: -rem(10); /* 左側の余白を考慮 */
+    bottom: rem(-3);
+    transition: transform 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    background-color: $black;
+}
+
+.works-list__head a span:hover::before {
+    transform: scale(1, 1);
 }
 
 .works-list__title {

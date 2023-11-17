@@ -6,9 +6,19 @@
 }
 
 .service__title {
-    text-align: left;@include mq(md){
-        text-align: right;
+    text-align: left;
+    @include mq(md){
+    text-align: right;
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(50px, 0);
     }
+}
+
+.service__title.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .service__items {

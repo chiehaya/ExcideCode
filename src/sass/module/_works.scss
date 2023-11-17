@@ -31,7 +31,16 @@
     @include mq(md){
         max-width: rem(1140);
         margin: auto;
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity, transform;
+        transform: translate(-50px, 0);
     }
+}
+
+.works__title.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .works__btn {

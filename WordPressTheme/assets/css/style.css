@@ -195,7 +195,7 @@ a {
 	font-size: 0.875rem;
 	font-weight: 500;
 	line-height: 1;
-	padding: 0 1.5rem;
+	padding-right: 1.5rem;
 	position: relative;
 	text-transform: uppercase;
 }
@@ -221,6 +221,24 @@ a {
 	right: 0.4375rem;
 }
 
+.btn::after {
+	background-color: #011950;
+	bottom: -0.1875rem;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s;
+	width: 100%;
+}
+
+.btn:hover::after {
+	transform: scale(1, 1);
+}
+
 .btn.btn--square {
 	border: 1px solid #011950;
 	border-radius: 5px;
@@ -234,6 +252,10 @@ a {
 
 .btn.btn--square:hover::before {
 	right: 1.25rem;
+}
+
+.btn.btn--square::after {
+	display: none;
 }
 
 .category {
@@ -797,6 +819,29 @@ a {
 	margin-top: 1.4375rem;
 }
 
+.news-list__title a {
+	display: inline-block;
+	position: relative;
+}
+
+.news-list__title a::before {
+	background-color: #111;
+	bottom: -0.1875rem;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s;
+	width: 100%;
+}
+
+.news-list__title a:hover::before {
+	transform: scale(1, 1);
+}
+
 .news-lists__item {
 	padding-bottom: 1.21875rem;
 	padding-top: 1.21875rem;
@@ -851,15 +896,37 @@ a {
 	margin-top: 2.5rem;
 }
 
+.news__title {
+	opacity: 0;
+	transform: translate(-50px, 0);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
+}
+
+.news__title.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
 .news__nav {
 	margin-top: 3.25rem;
 	padding-bottom: 2.625rem;
 	padding-left: 2.0625rem;
 }
 
+.news__nav.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
 .news__contents {
 	border-top: 1px solid #E2E2E2;
 	margin: 0 1.25rem;
+}
+
+.news__contents.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .news__items {
@@ -951,6 +1018,11 @@ a {
 	text-align: left;
 }
 
+.service__title.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
 .service__items {
 	margin-top: 1.75rem;
 }
@@ -981,6 +1053,7 @@ a {
 
 .works-list {
 	border-bottom: 1px solid #E2E2E2;
+	display: flex;
 	padding-bottom: 1.75rem;
 }
 
@@ -988,8 +1061,17 @@ a {
 	margin-top: 1.875rem;
 }
 
-.works-list a {
+.works__article {
 	display: flex;
+	opacity: 0;
+	transform: translate(0, -50px);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
+}
+
+.works__article.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .works-list__img {
@@ -1010,15 +1092,37 @@ a {
 }
 
 .works-list__head {
+	margin-bottom: 0.25rem;
+	margin-top: 0.71875rem;
+}
+
+.works-list__head a {
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
+	display: inline-block;
 	display: -webkit-box;
 	font-size: 0.875rem;
 	line-height: 2;
-	margin-bottom: 0.25rem;
-	margin-top: 0.71875rem;
 	overflow: hidden;
+	position: relative;
 	text-overflow: ellipsis;
+}
+
+.works-list__head a span::before {
+	background-color: #111;
+	bottom: -0.1875rem;
+	content: "";
+	height: 1px;
+	left: -rem(10); /* 左側の余白を考慮 */
+	position: absolute;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s;
+	width: calc(100% + 9.375rem); /* 余白を追加 */
+}
+
+.works-list__head a span:hover::before {
+	transform: scale(1, 1);
 }
 
 .works-list__title {
@@ -1061,6 +1165,11 @@ a {
 
 .works__title {
 	padding-left: 1.25rem;
+}
+
+.works__title.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .works__btn {
@@ -1350,13 +1459,22 @@ html {
 
 .news__nav {
 	margin-top: 4rem;
+	opacity: 0;
 	padding-bottom: 0;
 	padding-left: 1.25rem;
+	transform: translate(0, -50px);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
 }
 
 .news__contents {
 	border-top: none;
+	margin: 0;
+	opacity: 0;
 	padding-left: 3.75rem;
+	transform: translate(0, -50px);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
 	width: 76%;
 }
 
@@ -1400,7 +1518,11 @@ html {
 }
 
 .service__title {
+	opacity: 0;
 	text-align: right;
+	transform: translate(50px, 0);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
 }
 
 .site-message__sub-title {
@@ -1427,7 +1549,7 @@ html {
 	margin-left: 3.0625rem;
 }
 
-.works-list__head {
+.works-list__head a {
 	-webkit-line-clamp: 1;
 	font-size: 1.5rem;
 	margin-top: 1.4375rem;
@@ -1467,6 +1589,10 @@ html {
 .works__title {
 	margin: auto;
 	max-width: 71.25rem;
+	opacity: 0;
+	transform: translate(-50px, 0);
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
 }
 
 }
@@ -1475,10 +1601,6 @@ html {
 
 .news__head {
 	padding-top: 1.125rem;
-}
-
-.news__contents {
-	margin: 0;
 }
 
 }
