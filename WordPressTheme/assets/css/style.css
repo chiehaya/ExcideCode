@@ -946,7 +946,7 @@ a {
 	text-transform: capitalize;
 }
 
-.service-card a {
+.service-card {
 	background-color: #fff;
 	display: block;
 }
@@ -1225,6 +1225,7 @@ html {
 }
 
 .contact__inner {
+	align-items: center;
 	display: flex;
 	flex-direction: row-reverse;
 }
