@@ -1404,6 +1404,7 @@ html {
 .mv__contents {
 	margin-left: 4.4375rem;
 	margin-top: 3.9375rem;
+	writing-mode: vertical-rl;
 }
 
 .mv__title {
@@ -1411,7 +1412,6 @@ html {
 	font-weight: 700;
 	letter-spacing: 0.06em;
 	margin-left: 0.8125rem;
-	writing-mode: vertical-rl;
 }
 
 .news-list__meta .news-list__category:nth-of-type(1) {

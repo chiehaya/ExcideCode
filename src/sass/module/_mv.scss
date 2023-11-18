@@ -76,6 +76,8 @@
     @include mq(md){
         margin-top: rem(63);
         margin-left: rem(71);
+        writing-mode: vertical-rl;
+
     }
 }
 
@@ -87,7 +89,6 @@
     @include mq(md){
         font-size: rem(60);
         font-weight: $bold;
-        writing-mode: vertical-rl;
         letter-spacing: 0.06em;
         margin-left: rem(13);
     }
