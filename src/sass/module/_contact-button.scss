@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.contact-button {
+    width: rem(260);
+    padding: rem(14) 0;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    border: 1px solid $navy;
+    background-color: $navy;
+    transition: .3s;
+    color: $white;
+    font-size: rem(14);
+    text-align: center;
+    position: relative;
+    @include mq(md){
+        width: rem(446);
+    }
+}
+
+// .contact-button:hover {
+//     @include mq(md){
+//         color: $navy;
+//         background-color: $white;
+//         opacity: 1;
+//     }
+// }
+
+.contact-button--flex {
+    width: rem(151);
+    @include mq(md){
+        width: rem(280);
+        padding: rem(20) 0;
+    }
+}
+
+.contact-button--white {
+    background-color: $white;
+    color: $navy;
+}
+
+.contact-button--top {
+    width: rem(275);
+}
+
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: rem(80);
+    width: rem(6);
+    height: rem(6);
+    border-top: rem(1) solid $white;
+    border-right: rem(1) solid $white;
+    transform: translateY(-50%) rotate(-135deg);
+    transition: .3s;
+    @include mq(md){
+        left: rem(170);
+    }
+}
+
+
+.contact-button:hover {
+    opacity: 1;
+}
+
+.contact-button:hover::before {
+    left: rem(75);
+    @include mq(md){
+        left: rem(165);
+    }
+}
+
+.contact-button::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: rem(-3);
+    transition: transform 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    background-color: $white;
+}
+
+.contact-button:hover::after {
+    transform: scale(1, 1);
+    }

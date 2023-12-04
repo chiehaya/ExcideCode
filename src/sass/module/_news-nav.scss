@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: rem(20);
-    column-gap: rem(40);
+    column-gap: rem(5);
     @include mq(md){
         flex-direction: column;
         row-gap: rem(25);
@@ -13,6 +13,7 @@
 
 .news-nav__item {
     position: relative;
+    width: 48%;
 }
 
 .news-nav__item.is-active::before {

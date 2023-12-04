@@ -67,4 +67,37 @@ var fadeIn = $('.service__title,.works__title,.news__title,.works__article,.news
 	});
 });
 
+    // profile-swiper
+    const profileSwiper = new Swiper(".js-profile-swiper", {
+        loop: true,
+        spaceBetween: 4,
+        slidesPerView: 2.05,
+        speed: 6000,
+        allowTouchMove: false,
+        autoplay: {
+        delay: 0,
+        }
+    });
+
+    // 画面幅が768px以下の場合のSwiper設定
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    function handleViewportChange() {
+            if (mediaQuery.matches) {
+            // 画面幅が768px以下の場合
+            profileSwiper.params.slidesPerView = 2.05;
+            profileSwiper.update(); // Swiperを更新して変更を反映
+            } else {
+            // 画面幅が768pxより大きい場合
+            profileSwiper.params.slidesPerView = 3;
+            profileSwiper.update(); // Swiperを更新して変更を反映
+        }
+    }
+
+    // 初回設定
+    handleViewportChange();
+
+    // ウィンドウのリサイズ時に発火
+    window.addEventListener("resize", handleViewportChange);
+
 });

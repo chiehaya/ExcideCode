@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.article {
+
+}
+
+.article__list {
+
+}
+
+.article__list:not(:first-child) {
+    padding-top: rem(18);
+}
+
+
+.article__list a {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(18);
+    padding-bottom: rem(18);
+    border-bottom: 1px solid #E4E4E4;
+    width: inherit;
+}
+
+
+.article__img {
+    width: 32%;
+    aspect-ratio: 100 / 100 ;
+    @include mq(md){
+        width: 37.2%;
+    }
+}
+    
+.article__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.article__content {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mq(md){
+        width: 54.8%;
+    }
+}
+
+.article__title {
+    font-size: rem(12);
+
+}
+
+.works-list__date {
+
+}
+
+

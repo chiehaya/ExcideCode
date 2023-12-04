@@ -19,7 +19,6 @@ const changed = require("gulp-changed"); // 変更されたファイルのみを
 const del = require("del"); // ファイルやディレクトリを削除するためのモジュール
 const webp = require('gulp-webp');//webp変換
 const rename = require('gulp-rename');//ファイル名変更
-const themeName = "WordPressTheme"; // WordPress theme name
 
 // 読み込み先
 const srcPath = {
@@ -27,7 +26,6 @@ const srcPath = {
   js: "../src/js/**/*",
   img: "../src/images/**/*",
   html: ["../src/**/*.html", "!./node_modules/**"],
-  php: `../${themeName}/**/*.php`,
 };
 
 // html反映用
@@ -38,15 +36,6 @@ const destPath = {
   img: "../dist/assets/images/",
   html: "../dist/",
 };
-
-// WordPress反映用
-const destWpPath = {
-  all: `../${themeName}/assets/**/*`,
-  css: `../${themeName}/assets/css/`,
-  js: `../${themeName}/assets/js/`,
-  img: `../${themeName}/assets/images/`,
-};
-
 
 const browsers = ["last 2 versions", "> 5%", "ie = 11", "not ie <= 10", "ios >= 8", "and_chr >= 5", "Android >= 5"];
 
@@ -99,7 +88,6 @@ const cssSass = () => {
       .pipe(sourcemaps.write("./"))
       // コンパイル済みのCSSファイルを出力先に保存
       .pipe(dest(destPath.css))
-      .pipe(dest(destWpPath.css))
       // Sassコンパイルが完了したことを通知
       .pipe(
         notify({
@@ -142,11 +130,9 @@ const imgImagemin = () => {
         )
       )
       .pipe(dest(destPath.img))
-      .pipe(dest(destWpPath.img))
       .pipe(webp())//webpに変換
       // 圧縮済みの画像ファイルを出力先に保存
       .pipe(dest(destPath.img))
-      .pipe(dest(destWpPath.img))
   );
 };
 
@@ -169,15 +155,13 @@ const jsBabel = () => {
       )
       // 圧縮済みのファイルを出力先に保存
       .pipe(dest(destPath.js))
-      .pipe(dest(destWpPath.js))
   );
 };
 
+// ブラウザーシンク
 const browserSyncOption = {
   notify: false,
-  server: "../dist/", // ローカルサーバーのルートディレクトリ
-  // WordPressの場合は↓を有効にする。その場合、↑(server)はコメントアウトする。
-  // proxy: "", // ローカルサーバーのURL（WordPress）
+  server: "../dist/",
 };
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption);
@@ -189,7 +173,7 @@ const browserSyncReload = (done) => {
 
 // ファイルの削除
 const clean = () => {
-  return del([destPath.all, destWpPath.all], { force: true });
+  return del(destPath.all, { force: true });
 };
 // ファイルの監視
 const watchFiles = () => {
@@ -197,7 +181,6 @@ const watchFiles = () => {
   watch(srcPath.js, series(jsBabel, browserSyncReload));
   watch(srcPath.img, series(imgImagemin, browserSyncReload));
   watch(srcPath.html, series(htmlCopy, browserSyncReload));
-  watch(srcPath.php, browserSyncReload);
 };
 
 // ブラウザシンク付きの開発用タスク

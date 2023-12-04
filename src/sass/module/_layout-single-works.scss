@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.layout-single-works {
+    margin-top: rem(30);
+    margin-bottom: rem(75);
+    @include mq(md){
+        margin-top: rem(60);
+        margin-bottom: rem(120);
+    }
+}

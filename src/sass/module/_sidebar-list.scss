@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.sidebar-list {
+
+}
+
+.sidebar-list__item {
+    padding-bottom: rem(18);
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.sidebar-list__item:not(:first-child) {
+    padding-top: rem(18);
+}
+
+.sidebar-list__link {
+
+}
+

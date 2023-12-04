@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.page-form__item {
+    font-size: rem(15);
+    line-height: 2.285;
+}
+
+.page-form__item:not(:first-child){
+    margin-top: rem(30);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+sup {
+    color: #E20000;
+}
+
+.page-form__item span {
+    display: block;
+    font-size: rem(14);
+}
+
+.page-form__item__select {
+    position: relative;
+}
+
+.page-form__item__select::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid black;
+    width: rem(8);
+    height: rem(8);
+    top: 50%;
+    right: 20px;
+}
+
+.page-form__check {
+    text-align: center;
+    margin-top: rem(31);
+    @include mq(md){
+        text-align: left;
+    }
+}
+
+.page-contact__button {
+    text-align: center;
+    margin-top: rem(40);
+}

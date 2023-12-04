@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.page-head {
+    max-width: rem(840);
+    width: 100%;
+    margin: auto;
+}
+
+.page-head__nav {
+    color: $navy;
+    text-align: center;
+}
+
+.page-head__nav a {
+    position: relative;
+}
+
+.page-head__nav a:not(:first-child) {
+    margin-left: rem(55);
+    @include mq(md){
+        margin-left: rem(139);
+    }
+}  
+
+.page-head__nav a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-left: 2px solid $navy;
+    border-bottom: 2px solid $navy;
+    width: rem(7);
+    height: rem(7);
+    transform: translateY(-50%) rotate(-45deg);
+    top: 50%;
+    right: -23%;
+}
+
+.page-head__message {
+    font-size: rem(18);
+    margin-top: rem(60);
+    line-height: 2.285;
+    @include mq(md){
+        font-size: rem(40);
+        margin-top: rem(100);
+    }
+}
+
+.page-head__text {
+    margin-top: rem(30);
+    font-size: rem(14);
+    line-height: 2.285;
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}

@@ -16,14 +16,18 @@
 }
 
 .form i {
+    position: relative;
+    z-index: 10;
     @include mq(md){
         font-size: rem(23);
     }
 }
 
 .form:hover {
+    color: $navy;
     @include mq(md){
         opacity: 1;
+        
     }
 }
 
@@ -51,13 +55,8 @@
     position: relative;
     font-size: rem(16);
     line-height: 1;
-    transition: .3s;
+    // transition: .3s;
     @include mq(md){
         font-size: rem(22);
     }
 }
-
-.form:hover span {
-    color: $navy;
-}
-

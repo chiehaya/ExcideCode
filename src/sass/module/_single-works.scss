@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.single-works__inner.inner {
+    padding-right: rem(15);
+    padding-left: rem(15);
+    @include mq(md){
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: rem(920);
+    }
+}

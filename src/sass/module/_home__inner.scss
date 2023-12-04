@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.home {
+
+}
+
+.home__container {
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.home__inner.inner {
+    padding-right: rem(40);
+    padding-left: rem(40);
+}
+
+.home__nav {
+    padding-left: rem(10);
+    padding-bottom: rem(38);
+    border-bottom: 1px solid #E2E2E2;
+    @include mq(md){
+        border-bottom: none;
+        border-right: 1px solid #E2E2E2;
+        width: 20%;
+        padding-right: rem(20);
+    }
+}
+
+.home__items {
+    border-bottom: 1px solid #E2E2E2;
+    @include mq(md){
+        border-bottom: none;
+        width: 80%;
+        padding-left: rem(60);
+    }
+    
+}
+
+.home__pagenavi {
+    margin-top: rem(40);
+
+}

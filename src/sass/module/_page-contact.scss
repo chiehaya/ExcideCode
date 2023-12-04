@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.page-contact {
+
+}
+
+.page-contact__inner.inner {
+    max-width: rem(690);
+}
+
+.page-contact__text {
+    font-size: rem(14);
+    line-height: 2.285;
+}
+
+.page-contact__content {
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(100);
+    }
+}
+
+.page-contact__button {
+    text-align: center;
+}
+
+

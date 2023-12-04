@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.page-confirm {
+
+}
+
+.page-confirm__inner.inner {
+    max-width: rem(730);
+}
+
+.page-confirm__text {
+
+}
+
+.page-confirm__content {
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(100);
+    }
+}
+
+.page-confirm__item {
+    @include mq(md){
+        display: flex;
+        align-items: start;
+        gap: rem(49);
+    }
+}
+
+.page-confirm__item:not(:first-child) {
+    margin-top: rem(30);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.page-confirm__item dt {
+    font-size: rem(15);
+    @include mq(md){
+        width: 28.5%;
+    }
+}
+
+.page-confirm__item dd {
+    margin-top: rem(10);
+    line-height: 2.285;
+    font-size: rem(14);
+    @include mq(md){
+        margin-top: 0;
+        width: 66.8%;
+    }
+}
+
+.page-confirm__button {
+    display: flex;
+    gap: rem(23);
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(40);
+    @include mq(md){
+        gap: rem(80);
+        justify-content: left;
+    }
+}

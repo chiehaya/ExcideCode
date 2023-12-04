@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.page-complete {
+
+}
+
+.page-complete__inner {
+    text-align: center;
+}
+
+.page-complete__inner.inner {
+    max-width: rem(690);
+}
+
+.page-complete__content {
+    text-align: left;
+}
+
+.page-complete__title {
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1;
+    font-family: $Oswald-font-family;
+}
+
+.page-complete__message {
+    font-size: rem(14);
+    font-weight: $medium;
+    margin-top: rem(10);
+    @include mq(md){
+        margin-top: rem(20);
+    }
+}
+
+.page-complete__text {
+    font-size: rem(14);
+    line-height: 2.285;
+    margin-top: rem(30);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.page-complete__btn {
+    text-align: center;
+    margin-top: rem(40);
+}

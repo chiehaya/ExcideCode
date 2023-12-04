@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.philosophy {
+    background: linear-gradient(180deg, $bg-color 0%, $bg-color 90%, transparent 90%, transparent 100%);
+    padding-top: rem(60);
+    @include mq(md){
+        background: initial;
+        padding-top: 0;
+    }
+}
+
+.philosophy__container {
+    font-size: rem(14);
+    @include mq(md){
+        display: flex;
+        font-size: rem(16);
+        background-color: $bg-color;
+    }
+}
+
+.philosophy__head {
+    @include mq(md){
+        padding-top: rem(70);
+        padding-bottom: rem(70);
+        padding-right: rem(30);
+        padding-left: rem(30);
+        width: 67.6%;
+    }
+}
+
+.philosophy__text {
+    margin-top: rem(30);
+    line-height: 2.285;
+    @include mq(md){
+        margin-top: rem(60);
+    }
+}
+
+.philosophy__name {
+    margin-top: rem(30);
+    text-align: right;
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.philosophy__img {
+    margin-top: rem(30);
+    aspect-ratio: 335 / 300 ;
+    width: 100%;
+    @include mq(md){
+        margin-top: 0;        
+        aspect-ratio: 360 / 530 ;
+        width: 33%;
+    }
+}
+
+.philosophy__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

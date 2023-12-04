@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.single-blog {
+
+}
+
+.single-blog__container {
+    @include mq(md){
+        display: flex;
+        gap: rem(97);
+        margin-top: rem(60);
+    }
+}
+
+.single-blog__inner.inner {
+    padding-right: rem(15);
+    padding-left: rem(15);
+    @include mq(md){
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: rem(1250);
+    }
+}
+
+.single-blog__list {
+    @include mq(md){
+        width: 58%;
+    }
+}
+
+.single-blog__sidebar-item:not(:first-child) {
+    margin-top: rem(40);
+}
+
+.single-blog__sidebar-title {
+    background-color: $navy;
+    color: $white;
+    width: 100%;
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    padding-left: rem(18);
+    font-size: rem(14);
+    font-weight: $medium;
+}
+
+.single-blog__article,.single-blog__archive-list,.single-blog__category-list {
+    padding-right: rem(15);
+    padding-left: rem(15);
+    padding-top: rem(18);
+}
+
+
+
+
+
+
+

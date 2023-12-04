@@ -72,3 +72,25 @@
 .btn.btn--square::after {
     display: none;
 }
+
+
+
+.btn.btn--square-left {
+    padding: rem(14) rem(86) rem(14) rem(101);
+    border: 1px solid $navy;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn.btn--square-left::before {
+    left: rem(80);
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.btn.btn--square-left:hover::before {
+    left: rem(75);
+}
+
+.btn.btn--square-left::after {
+    display: none;
+}

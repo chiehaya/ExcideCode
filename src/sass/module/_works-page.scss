@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.works-page__nav {
+    padding-left: rem(10);
+    @include mq(md){
+        border-bottom: none;
+        border-right: 1px solid #E2E2E2;
+        width: 26%;
+        padding-right: rem(20);
+    }
+}
+
+.works-page__inner.inner {
+    padding-left: rem(40);
+    padding-right: rem(40);
+    @include mq(md){
+        padding-left: rem(25);
+        padding-right: rem(25);
+    }
+}
+
+.works-page__contents {
+    @include mq(md){
+        width: 68%;
+        padding-left: rem(60);
+    }
+}
+
+.works-page__container {
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.works-page__items {
+    margin-top: rem(38);
+    @include mq(md){
+        margin-top: 0;
+    }
+}

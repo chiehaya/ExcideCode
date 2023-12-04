@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.breadcrumb {
+    text-transform: capitalize;
+    text-align: right;
+    font-family: $Roboto-font-family;
+    margin-top: rem(10);
+    @include mq(md){
+        margin-top: rem(30);
+    }
+}
+
+.breadcrumb__inner.inner {
+    @include mq(md){
+        max-width: rem(1430);
+    }
+}
+
+.breadcrumb__text {
+    position: relative;
+    display: inline-block;
+    font-size: rem(10);
+    @include mq(md){
+        font-size: rem(15);
+    }
+}
+
+.breadcrumb__text span:first-child {
+    color: #A9A9A9;
+}
+
+.breadcrumb__text span:nth-child(2) {
+    position: absolute;
+    display: block;
+    background-color: #A9A9A9;
+    width: rem(20);
+    height: rem(1);
+    top: 50%;
+    left: 44%;
+    transform: translate(-50%);
+}
+
+.breadcrumb__text span:last-child {
+    padding-left: rem(40);
+}
